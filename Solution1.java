@@ -1,0 +1,26 @@
+package com.company;
+
+import java.util.Arrays;
+
+class Solution1 {
+    int[] nums={4,5,6,7,8};
+    int target=9;
+    public int[] twoSum() {
+        int[] output = new int[2];
+        for(int i=0;i<nums.length;i++){
+            for(int j=i+1;j<nums.length;j++){
+                if(nums[i]+nums[j]==target){
+                    output[0]=i;
+                    output[1]=j;
+                    return output;
+                }
+            }
+        }
+        return output;
+    }
+
+    public static void main(String[] args) {
+        Solution1 s1=new Solution1();
+        System.out.println(Arrays.toString(s1.twoSum()));
+    }
+}
